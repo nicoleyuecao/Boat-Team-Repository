@@ -5,11 +5,7 @@ def setupPi():
     GPIO.setmode(GPIO.BCM)  # define use of BCM mode.
     GPIO.setup(17, GPIO.OUT)  # Set pin 17 to be an output.
     pinsetup = GPIO.PWM(17, 50)  # Pin and frequency of PWM.
-    if runPi(pinsetup) == "Success":
-        print("Sail turned")
-    else:
-        return "Sail turning failed."
-
+    return pinsetup
 
 def runPi(pin):
 
@@ -25,4 +21,5 @@ def runPi(pin):
     return "Success"
 
 
-setupPi()
+setup = setupPi()
+runPi(setup)
