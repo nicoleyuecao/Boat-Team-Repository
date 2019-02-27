@@ -36,4 +36,4 @@ Now the bit that protects authors;
 
 No guarantee or warranty is offered by the author(s) of any files. No liability is accepted by any author(s). All rights go to respective authors.
 
-Group Links: Shared Google Drive Folder: https://drive.google.com/drive/folders/1eXPV_bQnP9C6cbpfjvnKG8NPW87Xo7DP Project List: https://livecoventryac-my.sharepoint.com/❌/r/personal/ab9160_coventry_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7B98E1F075-CD63-4F1F-8FE6-8E2282C65F67%7D&file=206CDE%20Project%20List.xlsx&action=default&mobileredirect=true
+Group Links: Shared Google Drive Folder: https://drive.google.com/drive/folders/1eXPV_bQnP9C6cbpfjvnKG8NPW87Xo7DP
