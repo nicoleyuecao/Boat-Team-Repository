@@ -14,9 +14,10 @@ def runPi(pin):
         pin.start(1)  # Sets the initial position, this will need to be changed to be more accurate.
     except:
         print("Error")
+        return "Failed"
+    finally:
         pin.stop()
         GPIO.cleanup()
-        return "Failed"
     
     return "Success"
 
