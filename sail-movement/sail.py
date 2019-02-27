@@ -1,4 +1,7 @@
+#Adrian and Gareth
+
 import RPi.GPIO as GPIO
+import time
 
 def setupPi():
 
