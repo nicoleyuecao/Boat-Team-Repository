@@ -1,4 +1,4 @@
 # Start Up
 
-In order to start up, we edited the rc.local file within the Rasberry Pi to start the main function script. 
-Call the main script file by specifying the path to it.
+In order to start up, rc.local file has been changed within the Rasberry Pi to start the main function script.
+Main script file is called as a function by specifying the path to it. 
