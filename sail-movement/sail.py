@@ -1,4 +1,5 @@
 #Adrian and Gareth
+#Please reference the file if you use this code.
 
 import RPi.GPIO as GPIO
 import time
@@ -39,5 +40,6 @@ while runner:
     sailAngle = int(input("Please enter the angle you would like the sail and then press enter: ")) # 90 degrees as the angle is currently central starting location.
     if sailAngle == "q" or sailAngle == "Q":
         runner = false
+        print("Finished")
 """    
 runPi(setup, sailAngle)
