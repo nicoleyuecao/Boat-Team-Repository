@@ -11,21 +11,21 @@ def setupPi():
     pinsetup = GPIO.PWM(11, 50)  # Pin and frequency of PWM.
     return pinsetup
 
-def runPi(pin, angle):
+def setSail(pin, angle):
     
     dutyChange = int(angle/18) + 1
 
     try:
         print("Attempting to set sail servo")
         pin.start(0)  # Sets the initial position.
-        pin.ChangeDutyCycle(dutyChange) # 7 is the middle point for the servo, 1 is the start, 12 is the end.
+        pin.ChangeDutyCycle(dutyChange) # 7 is the middle point for the servo, 1 is the start, 12 to 14 is the end.
         time.sleep(5) # Sleep until change is made.
     except:
-        print("Error")
+        print("Error, servo contact has been interrupted")
         return "Failed"
     finally:
-        pin.stop()
-        GPIO.cleanup()
+        pin.stop() # Stops the pin running high.
+        GPIO.cleanup() # Resets pins to default starting state.
     
     return "Success"
 
@@ -42,4 +42,4 @@ while runner:
         runner = false
         print("Finished")
 """    
-runPi(setup, sailAngle)
+setSail(setup, sailAngle)
