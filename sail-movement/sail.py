@@ -6,9 +6,9 @@ import time
 
 def setupPi():
 
-    GPIO.setmode(GPIO.BOARD)  # define use of BCM mode.
-    GPIO.setup(12, GPIO.OUT)  # Set pin 17 to be an output.
-    pinsetup = GPIO.PWM(12, 50)  # Pin and frequency of PWM.
+    GPIO.setmode(GPIO.BOARD)  # define use of Board mode.
+    GPIO.setup(11, GPIO.OUT)  # Set pin 11(gpio 17) to be an output.
+    pinsetup = GPIO.PWM(11, 50)  # Pin and frequency of PWM.
     return pinsetup
 
 def runPi(pin, angle):
@@ -31,7 +31,7 @@ def runPi(pin, angle):
 
 
 setup = setupPi() 
-runner = true
+#runner = true
 
 sailAngle = int(input("Please enter the angle you would like the sail and then press enter: ")) #90 degrees as the angle is central starting location.
 
