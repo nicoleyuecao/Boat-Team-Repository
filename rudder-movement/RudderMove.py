@@ -1,12 +1,11 @@
-#Andrew/Hardeep
+Andrew/Hardeep
 
 import RPi.GPIO as GPIO
 
-#straight -> 100Hz
-#starboard, soft -> 75Hz
-#starboard, hard -> 50Hz
-#port, soft -> 125Hz
-#port, hard -> 150Hz
+#straight -> 0Hz
+#starboard, hard -> 90Hz
+#port, hard -> -90Hz
+pi = 3.14159265359
 
 def setupPi(frequency):
     GPIO.setmode(GPIO.BOARD) #uses board pins
@@ -25,21 +24,13 @@ def runPi(pin):
 
     finally:
         pin.stop()
-        GPIO.cleanup()
+        GPIO.cleanup() #Clean up after yourself
     return "Success"
 
 def main():
-    Angle.lower() #allows for input    
-    if Angle == "starboard soft":
-        frequency = 75
-    elif Angle == "starboard hard":
-        frequency = 50
-    elif Angle == "port soft":
-        frequency = 125
-    elif Angle == "port hard":
-        frequency = 150
-    else:
-        frequency = 100
+    DegAngle = float(input())
+    while (DegAngle > -90 and DegAngle < 90):
+        RadAngle = DegAngle * (pi/180) 
         
-    setup = setupPi(frequency)
+    setup = setupPi(RadAngle)
     runPi(setup)
